@@ -1,0 +1,30 @@
+.title{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 13px;
+}
+
+.title h1{
+    color: #F0E1CE;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 1; /* 111.111% */
+letter-spacing: -0.72px;
+}
+
+.title p{
+    color: rgba(240, 225, 206, 0.60);
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 1; /* 150% */
+}

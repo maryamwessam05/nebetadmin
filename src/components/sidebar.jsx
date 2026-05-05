@@ -15,11 +15,10 @@ import icon9 from "../assets/icon08.svg"
 import icon10 from "../assets/icon09.svg"
 import icon11 from "../assets/icon10.svg"
 
-const Sidebar = () => {
-    const [collapsed, setCollapsed] = useState(false);
+const Sidebar = ({ collapsed, setCollapsed }) => {
 
     return (
-        <div className={`sidebar ${collapsed ? "sidebar--collapsed" : ""}`}>
+         <div className={`sidebar ${collapsed ? "sidebar--collapsed" : ""}`}>
             <div className="sidelogo">
                 <img src={sidelogo} alt="" className="sidebar__logo" />
                 <div className="line"></div>
@@ -41,7 +40,8 @@ const Sidebar = () => {
             </div>
 
             <div className="back">
-                <button onClick={() => setCollapsed(!collapsed)}>
+            <button onClick={() => setCollapsed(!collapsed)}>
+
                     <img
                         src={colarrow}
                         alt=""
