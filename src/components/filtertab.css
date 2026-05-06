@@ -1,0 +1,40 @@
+.filtertab{
+    display: flex;
+padding: 9.583px 23.938px 10.399px 23.998px;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+background: #F0E1CE;
+color: #0B0B0B;
+text-align: center;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+box-shadow: 0 10px 15px -3px rgba(194, 173, 103, 0.3), 0 4px 6px -4px rgba(212, 175, 55, 0.30);
+cursor: pointer;
+transition: all 300ms ease;
+}
+
+.filtertabunactive{
+        display: flex;
+padding: 9.583px 23.938px 10.399px 23.998px;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+color: #ffffff;
+text-align: center;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+cursor: pointer;
+transition: all 300ms ease;
+}
+
+.filtertabunactive:hover{
+box-shadow: 0 10px 15px -3px rgba(194, 173, 103, 0.3), 0 4px 6px -4px rgba(212, 175, 55, 0.30);
+
+}

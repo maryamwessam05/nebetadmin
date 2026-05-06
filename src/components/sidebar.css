@@ -11,7 +11,8 @@
     padding: 18px;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
     border-right: 1px solid rgba(255, 228, 166, 0.12);
     background: #0F0F0F;
     position: fixed;

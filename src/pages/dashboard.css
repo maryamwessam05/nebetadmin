@@ -7,7 +7,10 @@
 a{
     text-decoration: none;
 }
+body{
+    background: #0B0B0B;
 
+}
 main{
     background: #0B0B0B;
     display: flex;
@@ -66,7 +69,10 @@ font-weight: 700;
 line-height: 11px;
 right: -7px;
 }
-header img{
+.notif img{
+    width: 2vw;
+}
+.profile img{
     width: 2vw;
 }
 .profile{
@@ -186,7 +192,9 @@ font-family: "Darker Grotesque";
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
-line-height: 20px; /* 142.857% */
+line-height: 20px; 
+cursor: pointer;/* 142.857% */
+transition: all 300ms ease;
 }
 
 .bookingdat{
@@ -206,3 +214,745 @@ align-self: stretch;
 border-radius: 8px;
 background: rgba(42, 42, 42, 0.50);
 }
+
+.status {
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status--confirmed {
+    border: 0.59px solid rgba(0, 201, 80, 0.30);
+background: rgba(0, 201, 80, 0.20);
+    color: #05DF72;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+
+line-height: 25px; /* 133.333% */
+}
+
+.status--pending {
+    border: 0.59px solid rgba(240, 177, 0, 0.30);
+background: rgba(240, 177, 0, 0.20);
+    color: #F0E1CE;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+
+line-height: 25px; /* 133.333% */
+}
+
+.status--cancelled {
+    border: 0.59px solid rgba(251, 44, 54, 0.30);
+background: rgba(251, 44, 54, 0.30);
+    color: #FB2C36;
+leading-trim: both;
+text-edge: cap;
+text-align: center;
+
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 25px; /* 133.333% */
+}
+
+.bookname{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.bookname h4{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+
+.bookname h5{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+
+.bookprice{
+    display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.bookprice h3{
+    color: #F0E1CE;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+}
+.searchbar{
+    width: 100%;
+    position: relative;
+}
+.search{
+    display: flex;
+width: 100%;
+height: 49.167px;
+padding: 12px 16px 12px 44px;
+align-items: center;
+border: 0.59px solid rgba(212, 175, 55, 0.10);
+background: #1A1A1A;
+color: #F0E1CE;
+    caret-color: #F0E1CE;
+
+}
+
+.search::placeholder{
+    color: rgba(245, 245, 245, 0.50);
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.searchicon{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.filter{
+    display: flex;
+width: 100%;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+border: 0.59px solid rgba(212, 175, 55, 0.15);
+background: #141414;
+}
+
+.tabs{
+    display: flex;
+padding-bottom: 16px;
+align-items: flex-start;
+gap: 7.999px;
+flex-shrink: 0;
+align-self: stretch;
+border-bottom: 0.59px solid rgba(212, 175, 55, 0.15);
+}
+
+.filteroptions{
+    display: flex;
+padding-top: 16px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+align-self: stretch;
+}
+
+.fields{
+    display: flex;
+border: 0.59px solid rgba(212, 175, 55, 0.15);
+padding: 4px 10px;
+align-items: center;
+color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+}
+
+.preview{
+    display: flex;
+padding: 8px 14px;
+justify-content: center;
+align-items: flex-start;
+gap: 16px;
+border: 1.771px solid #F0E1CE;
+}
+
+.preview span{
+color: #F0E1CE;
+text-align: center;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+}
+.table{
+    width: 100%;
+}
+.table-wrapper{
+    display: flex;
+width: 100%;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+border: 0.59px solid rgba(212, 175, 55, 0.15);
+background: #141414;
+}
+table{
+    width: 100%;
+}
+thead{
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 0.59px solid rgba(212, 175, 55, 0.15);
+}
+
+tr{
+    width: 100%;
+}
+
+th{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+text-align: left;
+line-height: 20px; /* 142.857% */
+}
+tbody{
+    width: 100%;
+}
+.td{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+}
+.identifier-badge {
+    font-family: "Darker Grotesque";
+    font-size: 16px;
+    color: #F0E1CE;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 3px 8px;
+    white-space: nowrap;
+}
+
+.type-badge {
+    font-size: 16px;
+    color: #9CA3AF;
+    background: rgba(255,255,255,0.05);
+    padding: 3px 8px;
+    white-space: nowrap;
+    font-family: "Darker Grotesque";
+
+}
+.desc-cell{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    transition: background 0.2s;
+}
+.edit-btn:hover { background: rgba(212, 175, 55, 0.1); }
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #1A1A1A;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    width: 560px;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.modal-header h2 {
+    font-family: 'Darker Grotesque';
+    color: #F0E1CE;
+    font-size: 20px;
+    margin: 0 0 4px;
+}
+
+.modal-identifier {
+        font-family: 'Darker Grotesque';
+
+    font-size: 12px;
+    color: #F0E1CE;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.modal-close:hover { opacity: 1; }
+
+.modal-body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal-field label {
+    font-family: 'Darker Grotesque';
+    font-size: 13px;
+    color: #9CA3AF;
+    font-weight: 500;
+}
+
+.modal-field textarea {
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #F0E1CE;
+    font-family: 'Darker Grotesque';
+    font-size: 15px;
+    padding: 10px 12px;
+    resize: vertical;
+    transition: border-color 0.2s;
+    outline: none;
+}
+.modal-field textarea:focus {
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.modal-error {
+    color: #ef4444;
+    font-size: 13px;
+    font-family: 'Darker Grotesque';
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.modal-cancel {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #9CA3AF;
+    font-family: 'Darker Grotesque';
+    font-size: 15px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+.modal-cancel:hover { border-color: rgba(255,255,255,0.3); }
+
+.modal-save {
+    background: #F0E1CE;
+    border: none;
+    color: #111;
+    font-family: 'Darker Grotesque';
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.modal-save:hover { opacity: 0.85; }
+.modal-save:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.eventform {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+border: 0.59px solid rgba(212, 175, 55, 0.15);
+background: #141414;
+padding: 24px;
+}
+
+.eventrow {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.eventrow .group {
+    flex: 1;
+}
+
+.eventsavebtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+.group{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 23.998px;
+flex-shrink: 0;
+align-self: stretch;
+}
+.group label{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+}
+
+.group input {
+    display: flex;
+height: 45.163px;
+padding: 10px 16px;
+align-items: center;
+flex-shrink: 0;
+align-self: stretch;
+border: 0.59px solid rgba(212, 175, 55, 0.10);
+background: #1A1A1A;
+color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 100%;
+}
+
+.group textarea{
+        display: flex;
+height: 145.163px;
+padding: 10px 16px;
+align-items: center;
+flex-shrink: 0;
+align-self: stretch;
+border: 0.59px solid rgba(212, 175, 55, 0.10);
+background: #1A1A1A;
+color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    margin-left: auto;
+}
+
+input[type="date"],
+input[type="time"] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.success-msg{
+    font-family: "Darker Grotesque";
+    color: #F0E1CE;
+}
+
+.user-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-cell h4 {
+    font-family: 'Darker Grotesque';
+    font-size: 16px;
+    color: #F0E1CE;
+    margin: 0;
+    font-weight: 600;
+}
+
+.user-cell span {
+    font-family: 'Darker Grotesque';
+    font-size: 14px;
+    color: #9CA3AF;
+}
+.bookingtr{
+   height: 70px !important;
+}
+.bookingtr td {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.10);
+}
+
+.numb{
+    color: #F5F5F5;
+text-align: left;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.action-btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    
+    transition: background 0.2s;
+}
+.delete-btn:hover { background: rgba(239, 68, 68, 0.1); }
+
+.role--admin {
+    color: #D4AF37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.role--visitor {
+    color: #9CA3AF;
+    background: rgba(156, 163, 175, 0.1);
+}
+
+.delete-confirm {
+    background: #ef4444 !important;
+    color: #fff !important;
+}
+
+.messages{
+    display: flex;
+width: 100%;
+padding: 24px;
+align-items: flex-start;
+align-self: stretch;
+background: #141414;    
+transition: all ease 0.2s;
+    border: 1px solid transparent;
+
+justify-content: space-between;
+}
+.messages-list{
+    width: 100%;
+    padding: 24px;
+background: #141414;
+border: #f0e1ce66 1px solid;
+
+}
+.msg{
+    display: flex;
+align-items: center;
+gap: 12px;
+align-items: flex-start;
+align-self: stretch;
+}
+
+.msginf{
+    display: flex;
+
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+}
+
+.msginf h2{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 15px; /* 150% */
+}
+.msgemail{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+.msginf p{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+
+.datem{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap:4px;
+}
+
+.datem span{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+}
+.msgname-row{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status--replied {
+border: 0.59px solid rgba(212, 175, 55, 0.30);
+background: rgba(212, 175, 55, 0.20);
+    color: #F0E1CE;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+
+line-height: 25px; /* 133.333% */
+}
+
+.status--read {
+    border: 0.59px solid rgba(0, 201, 80, 0.30);
+background: rgba(0, 201, 80, 0.20);
+    color: #05DF72;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+
+line-height: 25px; /* 133.333% */
+}
+
+.status--new {
+border: 0.59px solid rgba(212, 175, 55, 0.30);
+    color: #F0E1CE;
+leading-trim: both;
+text-edge: cap;
+font-family: "Darker Grotesque";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+
+line-height: 25px; /* 133.333% */
+}
+
+.msg-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.msgstatus {
+    padding: 4px 12px;
+
+}
+
+.msg-status-select {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #F0E1CE;
+    font-family: 'Darker Grotesque';
+    font-size: 13px;
+    padding: 6px 10px;
+    cursor: pointer;
+    outline: none;
+}
+.msg-status-select:focus { border-color: rgba(212, 175, 55, 0.4); }
+
+.msg-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.msg-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 24px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.msg-stat span {
+    font-family: 'Darker Grotesque';
+    font-size: 13px;
+    color: #9CA3AF;
+}
+
+.msg-stat h3 {
+    font-family: 'Darker Grotesque';
+    font-size: 24px;
+    color: #F0E1CE;
+    margin: 0;
+}
+
+.no-messages {
+    font-family: 'Darker Grotesque';
+    color: #9CA3AF;
+    text-align: center;
+    padding: 40px;
+}
+
+.messages:hover { 
+    border-color: rgba(212, 175, 55, 0.25);
+    background-color: #f0e1ce2b;
+ }

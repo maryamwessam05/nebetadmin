@@ -29,10 +29,8 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
                 <SidebarLink to="/" img={dashboard} text="Dashboard" collapsed={collapsed} end />
                 <SidebarLink to="/contentmanagement" img={icon2} text="Content Management" collapsed={collapsed} />
                 <SidebarLink to="/eventdetails" img={icon3} text="Event Details" collapsed={collapsed} />
-                <SidebarLink to="/ticketspricing" img={icon4} text="Tickets & Pricing" collapsed={collapsed} />
                 <SidebarLink to="/bookings" img={icon5} text="Bookings" collapsed={collapsed} />
                 <SidebarLink to="/users" img={icon6} text="Users" collapsed={collapsed} />
-                <SidebarLink to="/gallery" img={icon7} text="Gallery" collapsed={collapsed} />
                 <SidebarLink to="/messages" img={icon8} text="Messages / Inquiries" collapsed={collapsed} />
                 <SidebarLink to="/analytics" img={icon9} text="Analytics" collapsed={collapsed} />
                 <SidebarLink to="/notifications" img={icon10} text="Notifications" collapsed={collapsed} />

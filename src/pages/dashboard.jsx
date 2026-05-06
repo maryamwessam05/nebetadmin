@@ -11,8 +11,8 @@ import staticon2 from "../assets/staticon02.svg"
 import staticon3 from "../assets/staticon03.svg"
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const RANGE_START = '2026-04-26';
-const RANGE_END   = '2026-05-06';
+export const RANGE_START = '2026-04-26';
+export const RANGE_END   = '2026-05-06';
 
 const Dashboard = () => {
     const [visitorData, setVisitorData] = useState([]);
@@ -21,6 +21,8 @@ const Dashboard = () => {
     const [visitorCount, setVisitorCount] = useState(0);
     const [bookingCount, setBookingCount] = useState(0);
     const [revenue, setRevenue] = useState(0);
+    const [bookings, setBookings] = useState([]);
+    const [showAllBookings, setShowAllBookings] = useState(false);
 
     useEffect(() => {
         const fetchVisitors = async () => {
@@ -82,6 +84,17 @@ const Dashboard = () => {
             setRevenueData(result);
         };
 
+        const fetchRecentBookings = async () => {
+        const { data, error } = await supabase
+            .from('booking')
+            .select('id, first_name, last_name, ticket_type, visit_date, total_price, booking_status')
+            .order('id', { ascending: false });
+
+        if (error) { console.error('recent bookings error:', error); return; }
+        setBookings(data);
+    };
+
+        fetchRecentBookings();
         fetchVisitors();
         fetchBookings();
     }, []);
@@ -152,18 +165,30 @@ const Dashboard = () => {
                             </ResponsiveContainer>
                         </div>
                     </div>
-                        <div className="chartcard2">
-                            <div className="bokheader">
-                            <h2>Recent Bookings</h2>
-                            <button>View All</button>
-
-                            </div>
-                            <div className="bookingdat">
-                                <div className="bookingrow">
-                                    
+                     <div className="chartcard2">
+                    <div className="bokheader">
+                        <h2>Recent Bookings</h2>
+                        <button onClick={() => setShowAllBookings(prev => !prev)}>
+                            {showAllBookings ? 'Collapse' : 'View All'}
+                        </button>
+                    </div>
+                    <div className="bookingdat">
+                        {(showAllBookings ? bookings : bookings.slice(0, 4)).map((booking) => (
+                            <div className="bookingrow" key={booking.id}>
+                                <div className="bookname">
+                                    <h4>{booking.first_name} {booking.last_name}</h4>
+                                    <h5>{booking.ticket_type.charAt(0).toUpperCase() + booking.ticket_type.slice(1)} · {new Date(booking.visit_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h5>
+                                </div>
+                                <div className="bookprice">
+                                    <h3>${booking.total_price.toLocaleString()}</h3>
+                                    <div className={`status status--${booking.booking_status}`}>
+                                        <span>{booking.booking_status.charAt(0).toUpperCase() + booking.booking_status.slice(1)}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ))}
+                    </div>
+                </div>
                 </div>
             </div>
         </main>
