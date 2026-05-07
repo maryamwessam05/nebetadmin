@@ -34,7 +34,6 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
                 <SidebarLink to="/messages" img={icon8} text="Messages / Inquiries" collapsed={collapsed} />
                 <SidebarLink to="/analytics" img={icon9} text="Analytics" collapsed={collapsed} />
                 <SidebarLink to="/notifications" img={icon10} text="Notifications" collapsed={collapsed} />
-                <SidebarLink to="/settings" img={icon11} text="Settings" collapsed={collapsed} />
             </div>
 
             <div className="back">

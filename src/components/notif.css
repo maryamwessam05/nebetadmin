@@ -1,0 +1,137 @@
+.notif-unread {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    align-self: stretch;
+    border: 0.59px solid rgba(212, 175, 55, 0.30);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.notif-read {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    align-self: stretch;
+    border: 0.59px solid rgba(212, 175, 55, 0.15);
+    background: #141414;
+}
+
+.notiftxt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notiftxt h4 {
+    color: #F5F5F5;
+    font-family: "Darker Grotesque";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+}
+
+.notiftxt h6 {
+    color: #9CA3AF;
+    font-family: "Darker Grotesque";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.notiftxt span {
+    color: #6B7280;
+    font-family: "Darker Grotesque";
+    font-size: 13px;
+}
+
+.notifac {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.activepoint {
+    width: 14px;
+    height: 14px;
+    border-radius: 500px;
+    background: #D4AF37;
+}
+
+.notifactions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.read-btn {
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 0.59px solid rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+}
+
+.read-btn span {
+    color: #F5F5F5;
+    font-family: "Darker Grotesque";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.delete-btn {
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0.59px solid rgba(220, 38, 38, 0.3);
+    cursor: pointer;
+}
+
+.notif-header-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.mark-all-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 0.59px solid rgba(212, 175, 55, 0.4);
+    color: #D4AF37;
+    font-family: "Darker Grotesque";
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mark-all-btn:hover {
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.no-notifs {
+    color: #6B7280;
+    font-family: "Darker Grotesque";
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.notiflist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}

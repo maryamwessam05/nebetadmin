@@ -7,6 +7,7 @@ import Booking from './booking';
 import Users from './users';
 import Messages from './messages';
 import Analytics from './analytics';
+import Notifications from './notifications';
 
 const AppRoutes = () => {
     return ( 
@@ -20,9 +21,7 @@ const AppRoutes = () => {
                 <Route path="/users" element={<Users/>} />
                 <Route path="/messages" element={<Messages />} />
                 <Route path="/analytics" element={<Analytics />} />
-                <Route path="/notifications" element={<Dashboard/>} />
-                <Route path="/settings" element={<Dashboard/>} />
-                <Route path="/addproduct" element={<Dashboard/>} />
+                <Route path="/notifications" element={<Notifications/>} />
 
 
             </Routes>
