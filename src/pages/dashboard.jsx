@@ -177,12 +177,24 @@ const Dashboard = () => {
                             <div className="bookingrow" key={booking.id}>
                                 <div className="bookname">
                                     <h4>{booking.first_name} {booking.last_name}</h4>
-                                    <h5>{booking.ticket_type.charAt(0).toUpperCase() + booking.ticket_type.slice(1)} · {new Date(booking.visit_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h5>
+                                    <h5>
+                                        {booking.ticket_type
+                                            ? booking.ticket_type.charAt(0).toUpperCase() + booking.ticket_type.slice(1)
+                                            : 'Unknown'}
+                                        {' · '}
+                                        {booking.visit_date
+                                            ? new Date(booking.visit_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                                            : 'No date'}
+                                    </h5>
                                 </div>
                                 <div className="bookprice">
-                                    <h3>${booking.total_price.toLocaleString()}</h3>
-                                    <div className={`status status--${booking.booking_status}`}>
-                                        <span>{booking.booking_status.charAt(0).toUpperCase() + booking.booking_status.slice(1)}</span>
+                                    <h3>${booking.total_price?.toLocaleString() ?? '0'}</h3>
+                                    <div className={`status status--${booking.booking_status ?? 'unknown'}`}>
+                                        <span>
+                                            {booking.booking_status
+                                                ? booking.booking_status.charAt(0).toUpperCase() + booking.booking_status.slice(1)
+                                                : 'Unknown'}
+                                        </span>
                                     </div>
                                 </div>
                             </div>

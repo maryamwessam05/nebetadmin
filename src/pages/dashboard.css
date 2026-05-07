@@ -1123,4 +1123,68 @@ box-shadow: 0 5px 9.2px 0 #7E7E7E;
     justify-content: center;
     align-items: center;
     gap: 25px;
+    flex-direction: column;
  }
+
+ .logincontainer{
+    display: flex;
+width: 447.996px;
+padding: 32px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+border: 0.59px solid rgba(212, 175, 55, 0.15);
+background: #141414;
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+ }
+
+ .welc{
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 8px;
+flex-shrink: 0;
+align-self: stretch;
+ }
+ .welc h1{
+    color: #F5F5F5;
+font-family: "Darker Grotesque";
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+letter-spacing: -0.24px;
+ }
+
+ .welc p{
+    color: #9CA3AF;
+font-family: "Darker Grotesque";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+ }
+
+.login{
+    display: flex;
+padding: 12px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+background: #F0E1CE;
+color: #0B0B0B;
+text-align: center;
+font-family: "Darker Grotesque";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+cursor: pointer;
+transition: all 300ms ease;
+}
+
+.login:hover{
+    transform: translateY(-3px);
+box-shadow: 0 5px 9.2px 0 #7E7E7E;
+}

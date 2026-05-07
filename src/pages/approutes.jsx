@@ -10,6 +10,7 @@ import Analytics from './analytics';
 import Notifications from './notifications';
 import Error from './error';
 import Login from './login';
+import NoAccess from './noaccess';
 
 const AppRoutes = () => {
     return ( 
@@ -26,6 +27,8 @@ const AppRoutes = () => {
                 <Route path="/notifications" element={<Notifications/>} />
                 <Route path="/" element={<Login />} />
                 <Route path="*" element={<Error />} />
+                <Route path="/noaccess" element={<NoAccess />} />
+
 
 
 
